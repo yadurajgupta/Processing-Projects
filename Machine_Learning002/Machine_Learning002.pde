@@ -2,7 +2,7 @@ Line target;
 Neuron brain;
 int pointsize=4;
 int linewidth=4;
-int pointNum=10000;//number of points
+int pointNum=100;//number of points
 Point[] points=new Point[pointNum];//array of new points
 int trainNum=10000;//Number pof points to train per frame
 int pointIndex;
@@ -25,10 +25,10 @@ void draw()
   {
     if (P.label==brain.guess(P.giveinputs()))
     {
-      //P.show(true);
+      P.show(true);
     } else
     {
-      //P.show(false);
+      P.show(false);
       wrongCount++;
       //if (wrongCount>0)
       //{

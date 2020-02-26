@@ -3,7 +3,7 @@ import java.util.*;
 ArrayList<Point> points=new ArrayList<Point>();
 ArrayList<Point> points1=new ArrayList<Point>();
 ArrayList<Tuple> vt=new ArrayList<Tuple>();
-int num=10;
+int num=100;
 int index=0;
 float a;
 float sweep=-1.5;

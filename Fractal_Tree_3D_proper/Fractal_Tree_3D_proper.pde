@@ -1,14 +1,14 @@
 import peasy.*;
 
-float theta_cons=PI/6;
-float theta_c=PI/9;
+float theta_cons=PI/9;
+float theta_c=PI/12;
 float ini_wid=10.0;
 ArrayList<Branch> gen0=new ArrayList<Branch>();
 ArrayList<Branch> gen1=new ArrayList<Branch>();
 float generation=0.0;
 float ColCycle=20.0;
 float sh=0.5;
-float ini_len=200.0;
+float ini_len=300.0;
 PeasyCam camera;
 void setup()
 {
