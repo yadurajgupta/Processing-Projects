@@ -19,7 +19,7 @@ class Boundary
   void highLight()
   {
     rectMode(CENTER);
-    strokeWeight(1);
+    strokeWeight(4);
     stroke(0, 255, 0);
     noFill();
     rect(x, y, w, h);

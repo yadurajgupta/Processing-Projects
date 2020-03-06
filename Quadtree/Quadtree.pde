@@ -24,6 +24,6 @@ void draw()
 }
 void mouseDragged()
 {
-  //for(int i=0;i<5;i++)
-  //QT.insert(new Point(mouseX+random(5),mouseY+random(5)));
+  for(int i=0;i<5;i++)
+  QT.insert(new Point(mouseX+random(20),mouseY+random(20)));
 }

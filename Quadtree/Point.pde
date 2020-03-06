@@ -9,13 +9,13 @@ class Point
   void show()
   {
     stroke(255);
-    strokeWeight(2);
+    strokeWeight(4);
     point(x, y);
   }
   void highLight()
   {
     stroke(0, 255, 0);
-    strokeWeight(4);
+    strokeWeight(8);
     point(x, y);
   }
 }
