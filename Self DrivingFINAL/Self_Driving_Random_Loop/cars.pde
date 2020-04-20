@@ -20,9 +20,9 @@ class Car
     pos.set(P.x, P.y);
     vel.set(0, 0);
     Boundary next=checkpoints.get(1);
-    PVector nextCheck=new PVector(next.A.x+next.B.x,next.A.y+next.B.y);
+    PVector nextCheck=new PVector((next.A.x+next.B.x)/2.0, (next.A.y+next.B.y)/2.0);
     vel.set(nextCheck.sub(pos));
-    vel.setMag(1);
+    vel.setMag(speed);
     acc.set(0, 0);
     net =new Network(networkSize, inputs, mutation);
     for (int i=0; i<inputs; i++)

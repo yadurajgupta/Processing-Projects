@@ -12,7 +12,7 @@ float angofvision=0.6*PI;                              //ANGEL OF VISION OF DRIV
 
 //NEURAL NETWORK VARIABLES
 int inputs=5;                                          //INPUT TO THE NETWORK
-int carnum=50;                                         //GENERATION SIZE
+int population=10;                                     //GENERATION SIZE
 
 int[] networkSize={6, 6, 1};                           //NETWORK STRUCTURE
 
@@ -21,7 +21,7 @@ float mutation=0.01;                                   //NUMBER OF RANDOM CARS I
 float mutationStrength=0.1;
 float mutationNew=0.3;
 int step=1;                                            //TIME STEP IN SIMULATION
-int LIFESPAN=70;                                      //AMOUNT OF TIME THE CAR CAN LIVE
+int LIFESPAN=70;                                       //AMOUNT OF TIME THE CAR CAN LIVE
 boolean demo=false;                                    //ONLY SHOWING THE BEST CAR IN THE GENERATION
 boolean showrays=false;                                //SHOW RAYS
 boolean showCheckpoints=true;                          //SHOW CHECKPOINTS
@@ -216,7 +216,7 @@ void initcars()
 {
   Generation=1;
   cars.clear();
-  for (int i=0; i<carnum; i++)
+  for (int i=0; i<population; i++)
   {
     Car c=new Car(start, mutation);
     cars.add(c);
