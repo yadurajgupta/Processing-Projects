@@ -12,13 +12,13 @@ float angofvision=0.6*PI;                              //ANGEL OF VISION OF DRIV
 
 //NEURAL NETWORK VARIABLES
 int inputs=5;                                          //INPUT TO THE NETWORK
-int population=10;                                     //GENERATION SIZE
+int population=50;                                     //GENERATION SIZE
 
-int[] networkSize={6, 6, 1};                           //NETWORK STRUCTURE
+int[] networkSize={10, 10, 1};                           //NETWORK STRUCTURE
 
 float forcemag=0.1;                                    //LIKE LEARNING CONSTANT
 float mutation=0.01;                                   //NUMBER OF RANDOM CARS IN NEW GENERATION
-float mutationStrength=0.1;
+float mutationStrength=1;
 float mutationNew=0.3;
 int step=1;                                            //TIME STEP IN SIMULATION
 int LIFESPAN=70;                                       //AMOUNT OF TIME THE CAR CAN LIVE
@@ -58,6 +58,10 @@ void draw() {
   end.goalshow();
   boolean nextgen=true;
   atleastonefinished=false;
+  for (Boundary B : bounds)
+  {
+    B.show();
+  }
   for (int i=0; i<step; i++)
   {
     for (Car c : cars)
@@ -110,18 +114,14 @@ void draw() {
         }
       }
     }
-    best.show();
     if (showrays)
       best.showRays();
+    best.show();
     if (atleastonefinished)
     {
       nextGen();
       atleastonefinished=false;
     }
-  }
-  for (Boundary B : bounds)
-  {
-    B.show();
   }
   if (nextgen)
   {

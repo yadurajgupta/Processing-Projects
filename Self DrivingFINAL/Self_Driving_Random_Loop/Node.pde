@@ -64,7 +64,7 @@ class Node
       if (ran<mutation_rate)
       {
         mutated.weights[i]=weights[i]*(1+random(-mutationStrength,mutationStrength));
-        constrain(mutated.weights[i],-1,1);
+        //constrain(mutated.weights[i],-1,1);
         float r=random(1);
         if(r<mutationNew)
         mutated.weights[i]=random(-1,1);
